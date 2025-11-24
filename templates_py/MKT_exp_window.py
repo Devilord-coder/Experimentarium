@@ -1,4 +1,4 @@
-ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
+MKT_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
@@ -58,7 +58,20 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_6">
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_5" rowstretch="1,1,1,1,1,1,1,1" columnstretch="0,0,0,0,0">
+          <layout class="QGridLayout" name="gridLayout_5" rowstretch="1,1,1,1,1,1,1,1,0" columnstretch="0,0,0,0,0">
+           <item row="6" column="3" colspan="2">
+            <widget class="QLabel" name="label_3">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Комментарии:</string>
+             </property>
+            </widget>
+           </item>
            <item row="0" column="3" colspan="2">
             <widget class="QLabel" name="figure_label">
              <property name="text">
@@ -69,7 +82,7 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
            <item row="2" column="4">
             <widget class="QSpinBox" name="speed_spinBox">
              <property name="maximum">
-              <number>300000000</number>
+              <number>999999999</number>
              </property>
             </widget>
            </item>
@@ -109,14 +122,7 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
            <item row="3" column="3">
             <widget class="QLabel" name="corner_label">
              <property name="text">
-              <string>угол (скорость к ОХ):</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="4">
-            <widget class="QLineEdit" name="color_lineEdit">
-             <property name="readOnly">
-              <bool>true</bool>
+              <string>концентрация:</string>
              </property>
             </widget>
            </item>
@@ -133,28 +139,28 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
            <item row="2" column="3">
             <widget class="QLabel" name="speed_label">
              <property name="text">
-              <string>скорость:</string>
+              <string>масса:</string>
              </property>
             </widget>
            </item>
            <item row="3" column="4">
             <widget class="QSpinBox" name="corner_spinBox">
              <property name="maximum">
-              <number>360</number>
+              <number>999999999</number>
              </property>
             </widget>
            </item>
            <item row="1" column="3">
             <widget class="QLabel" name="mass_label">
              <property name="text">
-              <string>масса:</string>
+              <string>молекулярная масса:</string>
              </property>
             </widget>
            </item>
            <item row="4" column="3">
             <widget class="QLabel" name="color_label">
              <property name="text">
-              <string>цвет:</string>
+              <string>объём:</string>
              </property>
             </widget>
            </item>
@@ -165,6 +171,9 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </widget>
            </item>
+           <item row="4" column="4">
+            <widget class="QSpinBox" name="V_spinBox"/>
+           </item>
            <item row="1" column="1">
             <widget class="QComboBox" name="env_comboBox">
              <property name="cursor">
@@ -172,31 +181,28 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </widget>
            </item>
-           <item row="6" column="3" rowspan="2" colspan="2">
+           <item row="7" column="3" rowspan="2" colspan="2">
             <widget class="QPlainTextEdit" name="comments_textEdit"/>
            </item>
-           <item row="4" column="0" rowspan="3" colspan="3">
+           <item row="4" column="0" rowspan="4" colspan="3">
             <widget class="QTextBrowser" name="figures_textbrowser"/>
            </item>
-           <item row="7" column="1">
+           <item row="8" column="1">
             <widget class="QPushButton" name="add_figure_btn">
              <property name="text">
               <string>Добавить тело</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="3" colspan="2">
-            <widget class="QLabel" name="label_3">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>25</height>
-              </size>
-             </property>
+           <item row="5" column="3">
+            <widget class="QLabel" name="label_4">
              <property name="text">
-              <string>Комментарии:</string>
+              <string>температура(К):</string>
              </property>
             </widget>
+           </item>
+           <item row="5" column="4">
+            <widget class="QSpinBox" name="T_spinBox"/>
            </item>
           </layout>
          </item>
@@ -208,7 +214,7 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_3" rowstretch="2,2,2,2,2,1,0" columnstretch="1,2,1">
+          <layout class="QGridLayout" name="gridLayout_3" rowstretch="2,0,0,0,0,0" columnstretch="1,2,1">
            <item row="0" column="1">
             <widget class="QPushButton" name="save_pushButton">
              <property name="text">
@@ -216,7 +222,7 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </widget>
            </item>
-           <item row="6" column="1">
+           <item row="5" column="1">
             <spacer name="verticalSpacer">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -229,7 +235,7 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </spacer>
            </item>
-           <item row="4" column="1">
+           <item row="3" column="1">
             <widget class="QPushButton" name="help_btn">
              <property name="text">
               <string>Помощь</string>
@@ -276,17 +282,10 @@ ballistic_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </spacer>
            </item>
-           <item row="5" column="1">
+           <item row="4" column="1">
             <widget class="QPushButton" name="escape_pushButton">
              <property name="text">
               <string>Выйти</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QPushButton" name="change_view_btn">
-             <property name="text">
-              <string>Внешний вид</string>
              </property>
             </widget>
            </item>

@@ -24,6 +24,7 @@ class BallisticExpWindow(ExperimentWindow):
         """ Вспомогательная функция авторизации """
         
         super().initUI()
+        
         self.sec_window = QWidget()
         self.flag = False
         self.type = 'ballistic'
