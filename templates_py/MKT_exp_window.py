@@ -172,7 +172,11 @@ MKT_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
             </widget>
            </item>
            <item row="4" column="4">
-            <widget class="QSpinBox" name="V_spinBox"/>
+            <widget class="QSpinBox" name="V_spinBox">
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
            </item>
            <item row="1" column="1">
             <widget class="QComboBox" name="env_comboBox">
@@ -202,7 +206,11 @@ MKT_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
             </widget>
            </item>
            <item row="5" column="4">
-            <widget class="QSpinBox" name="T_spinBox"/>
+            <widget class="QSpinBox" name="T_spinBox">
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>

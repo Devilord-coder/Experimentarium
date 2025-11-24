@@ -219,7 +219,3 @@ class Ideal_Gas:
             return input_ / Na
         elif mode == 'm':
             return input_ / self._M
-
-
-gas = Ideal_Gas(32, 'O2')
-print(gas.get_N('m', 20))
