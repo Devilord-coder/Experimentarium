@@ -6,14 +6,14 @@ MKT_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>894</width>
-    <height>600</height>
+    <width>700</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>800</width>
-    <height>600</height>
+    <width>700</width>
+    <height>500</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -80,14 +80,14 @@ MKT_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
             </widget>
            </item>
            <item row="2" column="4">
-            <widget class="QSpinBox" name="speed_spinBox">
+            <widget class="QSpinBox" name="m_spinBox">
              <property name="maximum">
               <number>999999999</number>
              </property>
             </widget>
            </item>
            <item row="1" column="4">
-            <widget class="QSpinBox" name="mass_spinBox">
+            <widget class="QSpinBox" name="Mr_spinBox">
              <property name="maximum">
               <number>999999999</number>
              </property>
@@ -144,7 +144,7 @@ MKT_exp_window = """<?xml version="1.0" encoding="UTF-8"?>
             </widget>
            </item>
            <item row="3" column="4">
-            <widget class="QSpinBox" name="corner_spinBox">
+            <widget class="QSpinBox" name="n_spinBox">
              <property name="maximum">
               <number>999999999</number>
              </property>

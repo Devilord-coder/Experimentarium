@@ -36,7 +36,6 @@ class BallisticExpWindow(ExperimentWindow):
         self.status.setStyleSheet('')
         
         self.add_figure_btn.clicked.connect(self.add_figure)
-        self.open_exp_btn.clicked.connect(self.main_window.open_experiment)
         self.change_view_btn.clicked.connect(self.change_result_theme)
         
         self.env_comboBox.currentTextChanged.connect(self.edit_g)

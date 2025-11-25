@@ -49,6 +49,7 @@ class ExperimentWindow(QWidget):
         self.save_pushButton.clicked.connect(self.save)
         self.expname_lineEdit.textChanged.connect(self.rename)
         self.escape_pushButton.clicked.connect(self.return_to_main)
+        self.open_exp_btn.clicked.connect(self.main_window.open_experiment)
         self.delete_btn.clicked.connect(self.delete)
         self.help_btn.clicked.connect(self.help)
         self.pixmap = QPixmap("resources/background.png")
