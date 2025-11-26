@@ -3,7 +3,7 @@ from PyQt6.QtGui import QPixmap, QImage, QIcon
 from PyQt6 import uic
 from PyQt6.QtCore import QUrl
 import io
-from templates_py.music_window import music_window
+from templates.music_window import music_window
 
 
 class Music_Window(QWidget):

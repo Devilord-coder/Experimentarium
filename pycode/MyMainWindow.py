@@ -1,11 +1,11 @@
 from PyQt6.QtWidgets import QMainWindow, QInputDialog
 from .AuWindowClasses import *
 from .Ballistic.BallisticMain import BallisticExpWindow
-from .MKT.MKT_ExpWindow import MKT_ExpWindow
+from .MKT.Tube.Tube_Window import Tube_Window
 from .HelpWindow import HelpWindow
 from .Music_Window import Music_Window
 from .MusicPlayer import MusicPlayer
-from templates_py.main_window import main_window
+from templates.main_window import main_window
 from sheets_py.main_window_sheet import main_window_sheet
 
 
@@ -16,6 +16,7 @@ class MyMainWindow(QMainWindow):
     
     def __init__(self):
         super().__init__()
+        # загрузка шаблона
         uic.loadUi(io.StringIO(main_window), self)
         self.setWindowIcon(QIcon("resources/vampire_bat.png"))
         # При инициализации запускается окно авторизации - главное окно скрыто до авторизвции
@@ -30,11 +31,13 @@ class MyMainWindow(QMainWindow):
         
         self.statusbar = self.statusBar()
         
+        # звук
         self.player = MusicPlayer('main', self)
         self.player.setLoops(-2)
         self.player.audio.setVolume(0.5)
         self.player.play()
         
+        # кнопки
         self.music_btn.clicked.connect(self.change_music)
         self.help_btn.clicked.connect(self.help)
         self.my_experiments_btn.clicked.connect(self.open_experiment)
@@ -51,6 +54,7 @@ class MyMainWindow(QMainWindow):
         self.close_action.triggered.connect(self.close)
         self.close_action.setShortcut('Ctrl+Q')
 
+        # картинка сзади
         self.pixmap = QPixmap("resources/background.png")
     
     def close(self):
@@ -132,7 +136,12 @@ class MyMainWindow(QMainWindow):
         if exp_type == 'Баллистика':
             self.sec_window = BallisticExpWindow(self)
         elif exp_type == 'МКТ':
-            self.sec_window = MKT_ExpWindow(self)
+            mkt_type, ok_pressed = QInputDialog.getItem(
+                self, "Тип МКТ-эксперимента", "Выберите тип МКТ-эксперимента",
+                ["Труба", "Цилиндр", "Замкнутый процесс"], editable=False
+            )
+            if mkt_type == 'Труба':
+                self.sec_window = Tube_Window(self)
         self.sec_window.show()
 
     def paintEvent(self, event):

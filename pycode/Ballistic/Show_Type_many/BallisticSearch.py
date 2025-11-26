@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QWidget
 from PyQt6 import uic
 import io
-from templates_py.ballistic_search import ballistic_search
+from templates.ballistic_search import ballistic_search
 from sheets_py.search_window_sheet import search_window_sheet
 from PyQt6.QtGui import QIcon
 

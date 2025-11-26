@@ -3,12 +3,12 @@ from PyQt6 import uic
 import io
 from PyQt6.QtGui import QIcon, QPainter, QPixmap
 from PyQt6.QtCore import Qt
-from .db_functions import *
-from .myhash import user_to_db, fhash
+from ..scripts.db_functions import *
+from ..scripts.myhash import user_to_db, fhash
 from .HelpWindow import HelpWindow
-from .check_password import check_password
-from templates_py.authorization import authorization
-from templates_py.registration import registration
+from ..scripts.check_password import check_password
+from templates.authorization import authorization
+from templates.registration import registration
 from sheets_py.authorization_window_sheet import authorization_window_sheet
 
 

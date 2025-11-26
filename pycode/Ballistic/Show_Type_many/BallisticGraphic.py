@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QWidget
 from PyQt6 import uic
 import io
-from templates_py.ballistic_graphic import ballistic_graphic
+from templates.ballistic_graphic import ballistic_graphic
 from PyQt6.QtGui import QIcon
 
 
