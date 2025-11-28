@@ -4,12 +4,13 @@ from PyQt6 import uic
 from PyQt6.QtCore import QTimer, QPointF, QRect
 from PyQt6.QtGui import QPainter, QColor, QIcon
 import io
-from templates_py.main_ballistic_show import main_ballistic_show
+from templates.main_ballistic_show import main_ballistic_show
 from sheets_py.show_window_sheet import show_window_sheet
 
 
 class MainBallisticShow(QWidget):
-    """Класс для визуализации полёта тела
+    """Класс для визуализации полёта тела 
+    в виде одного окна
     """
     
     def __init__(self, figure: BallisticFigure, g: float, parent=None):

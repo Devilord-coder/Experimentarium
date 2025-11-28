@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QWidget
 from PyQt6 import uic
 import io
 from PyQt6.QtGui import QIcon
-from templates_py.ballistic_result import ballistic_result
+from templates.ballistic_result import ballistic_result
 
 
 class BallisticResult(QWidget):

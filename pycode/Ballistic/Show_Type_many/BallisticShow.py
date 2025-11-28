@@ -1,17 +1,18 @@
 from PyQt6.QtWidgets import QWidget
-from .BallisticFigure import BallisticFigure
+from ..BallisticFigure import BallisticFigure
 from PyQt6 import uic
 from PyQt6.QtCore import QTimer, QPointF
 from PyQt6.QtGui import QPainter, QColor, QIcon
 from .BallisticResult import BallisticResult
 from .BallisticSearch import BalisticSearch
 from .BallisticGraphic import BallisticGraphic
-from templates_py.ballistic_show_window import ballistic_show_window
+from templates.ballistic_show_window import ballistic_show_window
 import io
 
 
 class BallisticShow(QWidget):
-    """Класс для визуализации полёта тела
+    """Класс для визуализации полёта тела 
+    в виде нескольких окон
     """
     
     def __init__(self, figure: BallisticFigure, g: float, parent=None):

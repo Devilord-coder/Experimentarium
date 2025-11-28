@@ -1,5 +1,5 @@
 from PyQt6.QtWidgets import QWidget
-from templates_py.change_exp_theme_window import change_exp_theme_window
+from templates.change_exp_theme_window import change_exp_theme_window
 from PyQt6 import uic
 import io
 

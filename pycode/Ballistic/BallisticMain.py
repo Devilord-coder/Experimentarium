@@ -1,11 +1,11 @@
 from pycode.ExperimentClasses import ExperimentWindow, ErrorDialog
-from .BallisticShow import BallisticShow
+from .Show_Type_many.BallisticShow import BallisticShow
 from .MainBallisticShow import MainBallisticShow
 from .environments import ENV
 from PyQt6.QtWidgets import QWidget, QInputDialog, QColorDialog
-from pycode.db_functions import save_ballistic_exp, get_experiment
+from scripts.db_functions import save_ballistic_exp, get_experiment
 from .BallisticFigure import BallisticFigure
-from templates_py.ballistic_exp_window import ballistic_exp_window
+from templates.ballistic_exp_window import ballistic_exp_window
 from .ChangeThemeWindow import ChangeThemeWindow
 
 

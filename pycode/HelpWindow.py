@@ -3,7 +3,7 @@ from PyQt6 import uic
 from PyQt6.QtGui import QPixmap, QPainter, QIcon
 from PyQt6.QtCore import Qt
 import io
-from templates_py.help_window import help_window
+from templates.help_window import help_window
 from sheets_py.help_window_sheet import help_window_sheet
 from resources.help_html_text import HTML
 
