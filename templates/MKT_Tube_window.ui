@@ -149,6 +149,9 @@
              <property name="styleSheet">
               <string notr="true">background-color: &quot;black&quot;</string>
              </property>
+             <property name="digitCount">
+              <number>20</number>
+             </property>
             </widget>
            </item>
            <item row="6" column="4">
@@ -161,6 +164,9 @@
              </property>
              <property name="styleSheet">
               <string notr="true">background-color: &quot;grey&quot;;</string>
+             </property>
+             <property name="digitCount">
+              <number>5</number>
              </property>
             </widget>
            </item>
@@ -197,7 +203,7 @@
               <number>4</number>
              </property>
              <property name="maximum">
-              <number>2000</number>
+              <number>1000</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
@@ -208,7 +214,7 @@
             </widget>
            </item>
            <item row="4" column="4">
-            <widget class="QSpinBox" name="n_spinBox">
+            <widget class="QSpinBox" name="V_spinBox">
              <property name="maximum">
               <number>999999999</number>
              </property>
@@ -224,7 +230,7 @@
            <item row="4" column="3">
             <widget class="QLabel" name="corner_label">
              <property name="text">
-              <string>концентрация:</string>
+              <string>объём:</string>
              </property>
             </widget>
            </item>
