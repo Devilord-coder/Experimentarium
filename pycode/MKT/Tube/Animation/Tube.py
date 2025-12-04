@@ -9,6 +9,10 @@ import random
 
 
 class Tube(QWidget):
+    """
+    Класс для визуалицации трубы в экспериментах типа MKT
+    """
+    
     def __init__(self, parent):
         super().__init__()
         
@@ -22,14 +26,21 @@ class Tube(QWidget):
         
         self.create_molecules(self.main_window.T_Slider.value())
     
-    def create_molecules(self, T):
+    def create_molecules(self, T: float):
+        """ Функция для создания молекул в трубе
+
+        Args:
+            T (float): температура в трубе, в Кельвинах
+        """
+        
         T_factor = T / 1000
-        for _ in range(300):
-            radius = 5
+        for _ in range(100):
+            radius = 10
             x = random.randint(radius, self.width() - radius)
             y = random.randint(radius, self.height() - radius)
             color = QColor(128, 128, 128)
             
+            # Изменение скорости молекул в зависимости от температуры
             if T_factor < 0.2:
                 speeds = [-2, -1, 1, 2]
             elif 0.2 <= T_factor < 0.4:
@@ -46,17 +57,19 @@ class Tube(QWidget):
             self.molecules.append(Molecule(x, y, radius, color, delta_x, delta_y))
     
     def update_balls(self):
-        # Обновляем позиции всех шариков
+        """ Изменение положений всех молекул """
+        
+        # Обновляем позиции всех молекул
         for molecule in self.molecules:
             molecule.move(self.width(), self.height())
         
-        # Перерисовываем виджет
+        # Обновляем
         self.update()
     
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.RenderHint.Antialiasing)
         
-        # Рисуем все шарики
+        # Рисуем все молекулы
         for molecule in self.molecules:
             molecule.draw(painter)
