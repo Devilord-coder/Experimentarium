@@ -3,7 +3,7 @@ from sqlite3 import connect
 
 
 def fhash(obj: str):
-    """Функция для хэширования
+    """ Функция для хэширования
 
     Args:
         obj (str): строка, которую надо хэшировать

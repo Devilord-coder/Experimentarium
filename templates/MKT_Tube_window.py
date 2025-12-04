@@ -6,7 +6,7 @@ MKT_Tube_window = """<?xml version="1.0" encoding="UTF-8"?>
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
+    <width>1454</width>
     <height>800</height>
    </rect>
   </property>
@@ -288,7 +288,7 @@ MKT_Tube_window = """<?xml version="1.0" encoding="UTF-8"?>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_3" rowstretch="2,0,0,0,0,0" columnstretch="1,2,1">
+          <layout class="QGridLayout" name="gridLayout_3" rowstretch="2,0,0,0,0,0,0" columnstretch="1,2,1">
            <item row="0" column="1">
             <widget class="QPushButton" name="save_pushButton">
              <property name="text">
@@ -296,7 +296,7 @@ MKT_Tube_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
+           <item row="6" column="1">
             <spacer name="verticalSpacer">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -309,39 +309,19 @@ MKT_Tube_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </spacer>
            </item>
-           <item row="3" column="1">
+           <item row="4" column="1">
             <widget class="QPushButton" name="help_btn">
              <property name="text">
               <string>Помощь</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
-            <widget class="QPushButton" name="open_exp_btn">
+           <item row="5" column="1">
+            <widget class="QPushButton" name="escape_pushButton">
              <property name="text">
-              <string>Открыть эксперимент</string>
+              <string>Выйти</string>
              </property>
             </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QPushButton" name="delete_btn">
-             <property name="text">
-              <string>Удалить</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <spacer name="horizontalSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
            </item>
            <item row="2" column="2">
             <spacer name="horizontalSpacer_2">
@@ -356,10 +336,37 @@ MKT_Tube_window = """<?xml version="1.0" encoding="UTF-8"?>
              </property>
             </spacer>
            </item>
-           <item row="4" column="1">
-            <widget class="QPushButton" name="escape_pushButton">
+           <item row="1" column="0">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="delete_btn">
              <property name="text">
-              <string>Выйти</string>
+              <string>Удалить</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="open_exp_btn">
+             <property name="text">
+              <string>Открыть эксперимент</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="physical_base_btn">
+             <property name="text">
+              <string>Справка</string>
              </property>
             </widget>
            </item>

@@ -4,6 +4,7 @@ from PyQt6.QtWidgets import QSlider, QSpinBox, QLCDNumber, QTabWidget
 from pycode.MKT.Ideal_Gas import Ideal_Gas
 from .Animation.Tube import Tube
 from .NotAllParametrsError import NotAllParametrsError
+from .Physical_base_window import Physical_Base_Window
 
 
 class Tube_Window(MKT_ExpWindow):
@@ -20,20 +21,34 @@ class Tube_Window(MKT_ExpWindow):
         self.T_Slider.valueChanged.connect(self.update_T)
         self.Mr_spinBox.valueChanged.connect(self.edit_gas)
         self.start_btn.clicked.connect(self.start)
+        self.physical_base_btn.clicked.connect(self.show_physics)
         
         self.tube_tabWidget.setStyleSheet('''background-color: "black";
                                           border: 1px solid #555;
                                           border-radius: 5px;
                                           padding: 5px 10px;''')
+
+    def show_physics(self):
+        self.sec_window = Physical_Base_Window(self)
+        self.sec_window.show()
     
     def edit_gas(self):
+        """ Изменение газа """
+        
         self.gas = Ideal_Gas(self.Mr_spinBox.value(), self.expname_lineEdit.text())
     
     def update_T(self):
+        """ Обновление температуры """
+        
         self.T_lcdNumber.display(self.T_Slider.value())
         self.avgV_lcdNumber.display(self.gas.get_avgV(self.T_Slider.value()))
     
     def start(self):
+        """ Запуск эксперимента
+
+        Raises:
+            NotAllParametrsError: при попытке начать эксперимент без ввода необходимых параметров
+        """
         error_parametrs = []
         if not self.Mr_spinBox.value():
             error_parametrs.append('Mr')
