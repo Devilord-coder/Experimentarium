@@ -113,7 +113,6 @@ class MyMainWindow(QMainWindow):
         self.sec_window = BallisticExpWindow(self)
         self.sec_window.set_params(name, self.login) # Загружаем параметры эксперимента
         self.sec_window.show()
-        self.hide()
     
     def help(self):
         """Функция для открытия окна помощи
@@ -127,12 +126,13 @@ class MyMainWindow(QMainWindow):
         """
         Создание нового эксперимента
         """
-        self.hide()
         
         exp_type, ok_pressed = QInputDialog.getItem(
             self, "Тип эксперимента", "Выберите тип эксперимента",
             ["Баллистика", "МКТ"], editable=False
         )
+        if not ok_pressed:
+            return
         if exp_type == 'Баллистика':
             self.sec_window = BallisticExpWindow(self)
         elif exp_type == 'МКТ':

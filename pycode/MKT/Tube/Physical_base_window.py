@@ -3,6 +3,8 @@ from resources.MKT_physiscs import PHYSICS
 from PyQt6.QtGui import QIcon
 from PyQt6 import uic
 import io
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QPainter, QPixmap
 from templates.physical_base_window import physical_base_window
 from sheets_py.experiment_window_sheet import experiment_window_sheet
 
@@ -14,7 +16,22 @@ class Physical_Base_Window(QWidget):
         super().__init__()
         uic.loadUi(io.StringIO(physical_base_window), self)
         self.setWindowIcon(QIcon("resources/vampire_bat.png"))
+        self.setStyleSheet('background-color: "black"')
         self.setStyleSheet(experiment_window_sheet)
         self.main_window = main_window
         
         self.textBrowser.setHtml(PHYSICS)
+        
+        self.pixmap = QPixmap('resources/help_photo.jpg')
+    
+    def paintEvent(self, event):
+        super().paintEvent(event)
+        
+        painter = QPainter(self)
+        # Масштабируем изображение под размер виджета
+        scaled_pixmap = self.pixmap.scaled(
+            self.size(),
+            Qt.AspectRatioMode.IgnoreAspectRatio,
+            Qt.TransformationMode.SmoothTransformation
+        )
+        painter.drawPixmap(0, 0, scaled_pixmap)
