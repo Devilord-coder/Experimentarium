@@ -2,12 +2,12 @@ from pycode.MKT.MKT_ExpWindow import MKT_ExpWindow
 from templates.MKT_Tube_window import MKT_Tube_window
 from PyQt6.QtWidgets import QSlider, QSpinBox, QLCDNumber, QTabWidget
 from pycode.MKT.Ideal_Gas import Ideal_Gas
-from .Animation.Tube import Tube
+from .Animation import Tube
 from .NotAllParametrsError import NotAllParametrsError
 from .Physical_base_window import Physical_Base_Window
 
 
-class Tube_Window(MKT_ExpWindow):
+class TubeWindow(MKT_ExpWindow):
     """ Класс для МКТ-экспериментов типа "Труба" """
     
     def __init__(self, parent):
@@ -17,20 +17,16 @@ class Tube_Window(MKT_ExpWindow):
     def initUI(self):
         super().initUI()
         
+        self.physics_window = Physical_Base_Window(self)
         self.gas = Ideal_Gas(self.Mr_spinBox.value(), self.expname_lineEdit.text())
         self.T_Slider.valueChanged.connect(self.update_T)
         self.Mr_spinBox.valueChanged.connect(self.edit_gas)
         self.start_btn.clicked.connect(self.start)
-        self.physical_base_btn.clicked.connect(self.show_physics)
         
         self.tube_tabWidget.setStyleSheet('''background-color: "black";
                                           border: 1px solid #555;
                                           border-radius: 5px;
                                           padding: 5px 10px;''')
-
-    def show_physics(self):
-        self.sec_window = Physical_Base_Window(self)
-        self.sec_window.show()
     
     def edit_gas(self):
         """ Изменение газа """
