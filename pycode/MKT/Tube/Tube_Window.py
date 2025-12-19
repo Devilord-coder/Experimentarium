@@ -67,7 +67,7 @@ class Tube_Window(MKT_ExpWindow):
             p = self.gas.get_P(
                 self.V_spinBox.value(),
                 self.T_Slider.value(),
-                mode='VT'
+                self.m_spinBox.value(),
+                mode='M'
             )
             self.P_lcdNumber.display(p)
-            print(int(p), p)

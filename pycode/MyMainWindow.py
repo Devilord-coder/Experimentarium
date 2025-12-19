@@ -133,6 +133,8 @@ class MyMainWindow(QMainWindow):
             self, "Тип эксперимента", "Выберите тип эксперимента",
             ["Баллистика", "МКТ"], editable=False
         )
+        if not ok_pressed:
+            return
         if exp_type == 'Баллистика':
             self.sec_window = BallisticExpWindow(self)
         elif exp_type == 'МКТ':

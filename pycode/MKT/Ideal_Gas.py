@@ -71,6 +71,8 @@ class Ideal_Gas:
             float: средняя квадратичная скорость молекул, м/с
         """
         
+        if not self._M:
+            return 0
         return (3 * R * T / self._M) ** 0.5
 
     @overload
@@ -93,13 +95,13 @@ class Ideal_Gas:
         ...
     
     @overload
-    def get_P(self, V: float, T: float, mode='VT') -> float:
+    def get_P(self, V: float, T: float, m: float, mode='M') -> float:
         """ Функция для получения давления газа на стенки сосуда
         по концентрации и температуре
         
-        При условии: m = const!
+        Формула: P = (m / M * R * T) / V - из уравнения Менделеева
         
-        Формула: P = T / V - из уравнения Менделеева-Клопейрона
+        R = 8.31 -  Универсальная газовая постоянная
 
         Args:
             V (float): объём газа, в метрах кубических
@@ -111,8 +113,8 @@ class Ideal_Gas:
         
         ...
     
-    def get_P(self, input1_: float, input2_: float, mode: str) -> float:
-        if mode == 'VT':
-            return input2_ / input1_
+    def get_P(self, input1_: float, input2_: float, input3_: float | None, mode: str) -> float:
+        if mode == 'M':
+            return (input3_ / self._M * input2_ * R) / input1_
         elif mode == 'nT':
             return input1_ * k * input2_
