@@ -127,7 +127,6 @@ class MyMainWindow(QMainWindow):
         """
         Создание нового эксперимента
         """
-        self.hide()
         
         exp_type, ok_pressed = QInputDialog.getItem(
             self, "Тип эксперимента", "Выберите тип эксперимента",
@@ -135,6 +134,7 @@ class MyMainWindow(QMainWindow):
         )
         if not ok_pressed:
             return
+        self.hide()
         if exp_type == 'Баллистика':
             self.sec_window = BallisticExpWindow(self)
         elif exp_type == 'МКТ':
