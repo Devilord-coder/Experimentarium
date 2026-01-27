@@ -140,7 +140,7 @@ class MyMainWindow(QMainWindow):
         elif exp_type == 'МКТ':
             mkt_type, ok_pressed = QInputDialog.getItem(
                 self, "Тип МКТ-эксперимента", "Выберите тип МКТ-эксперимента",
-                ["Труба", "Цилиндр", "Замкнутый процесс"], editable=False
+                ["Труба"], editable=False
             )
             if mkt_type == 'Труба':
                 self.sec_window = TubeWindow(self)
