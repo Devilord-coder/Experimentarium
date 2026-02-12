@@ -93,6 +93,7 @@ class ExperimentWindow(QWidget):
         Args:
             event (_type_): Событие
         """
+        
         painter = QPainter(self)
         # Масштабируем изображение под размер виджета
         scaled_pixmap = self.pixmap.scaled(

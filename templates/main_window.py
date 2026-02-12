@@ -38,7 +38,7 @@ main_window = """<?xml version="1.0" encoding="UTF-8"?>
       <item row="3" column="1">
        <widget class="QPushButton" name="my_experiments_btn">
         <property name="text">
-         <string>Мои эксперименты</string>
+         <string>Мои эксперименты🏠</string>
         </property>
        </widget>
       </item>
@@ -58,7 +58,7 @@ main_window = """<?xml version="1.0" encoding="UTF-8"?>
       <item row="6" column="1">
        <widget class="QPushButton" name="help_btn">
         <property name="text">
-         <string>Помощь</string>
+         <string>Помощь🆘</string>
         </property>
        </widget>
       </item>
@@ -78,7 +78,7 @@ main_window = """<?xml version="1.0" encoding="UTF-8"?>
       <item row="4" column="1">
        <widget class="QPushButton" name="new_experiment_btn">
         <property name="text">
-         <string>Новый эксперимент</string>
+         <string>Новый эксперимент🔬</string>
         </property>
        </widget>
       </item>
@@ -98,7 +98,7 @@ main_window = """<?xml version="1.0" encoding="UTF-8"?>
       <item row="7" column="1">
        <widget class="QPushButton" name="escape_btn">
         <property name="text">
-         <string>Выйти из аккаунта</string>
+         <string>Выйти из аккаунта⬅️</string>
         </property>
        </widget>
       </item>
@@ -128,14 +128,14 @@ main_window = """<?xml version="1.0" encoding="UTF-8"?>
       <item row="8" column="1">
        <widget class="QPushButton" name="close_btn">
         <property name="text">
-         <string>Закрыть</string>
+         <string>Закрыть❌</string>
         </property>
        </widget>
       </item>
       <item row="5" column="1">
        <widget class="QPushButton" name="music_btn">
         <property name="text">
-         <string>Музыка</string>
+         <string>Музыка🎧</string>
         </property>
        </widget>
       </item>

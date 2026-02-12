@@ -163,8 +163,14 @@ def save_experiment(exp) -> tuple:
     name = exp.expname_lineEdit.text()
     if not name:
         return False, 'У эксперимента должно быть имя'
-    env = exp.env_comboBox.currentText()
-    figures = ','.join(exp.figures_textbrowser.toPlainText().split('\n'))
+    try:
+        env = exp.env_comboBox.currentText()
+    except AttributeError:
+        env = "None"
+    try:
+        figures = ','.join(exp.figures_textbrowser.toPlainText().split('\n'))
+    except AttributeError:
+        figures = []
     if not figures:
         return False, "В эксперименте должны быть тела"
     comments = exp.comments_textEdit.toPlainText().replace('\n', '|n|')

@@ -11,4 +11,11 @@ class MKT_ExpWindow(ExperimentWindow):
     def initUI(self):
         super().initUI()
         
-        ...
+        self.physics_window = None
+        self.physical_base_btn.clicked.connect(self.show_physics)
+    
+    def show_physics(self):
+        """ Функция для открытия окна с формулами """
+        
+        self.sec_window = self.physics_window
+        self.sec_window.show()

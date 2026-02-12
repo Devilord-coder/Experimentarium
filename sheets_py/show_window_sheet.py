@@ -1,4 +1,10 @@
-show_window_sheet = """/* Стиль для кнопок */
+show_window_sheet = """
+QWidget {
+    background-color: rgb(47, 79, 79);
+}
+
+
+/* Стиль для кнопок */
 QPushButton {
     background-color: #2a3943;
     color: #a9b7c6;

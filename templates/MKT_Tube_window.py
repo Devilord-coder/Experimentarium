@@ -237,7 +237,7 @@ MKT_Tube_window = """<?xml version="1.0" encoding="UTF-8"?>
            <item row="2" column="3">
             <widget class="QLabel" name="mass_label">
              <property name="text">
-              <string>молекулярная масса:</string>
+              <string>относительная молярная масса:</string>
              </property>
             </widget>
            </item>

@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QMainWindow, QInputDialog
 from .AuWindowClasses import *
 from .Ballistic.BallisticMain import BallisticExpWindow
-from .MKT.Tube.Tube_Window import Tube_Window
+from .MKT import *
 from .HelpWindow import HelpWindow
 from .Music_Window import Music_Window
 from .MusicPlayer import MusicPlayer
@@ -133,15 +133,18 @@ class MyMainWindow(QMainWindow):
         )
         if not ok_pressed:
             return
+        self.hide()
         if exp_type == 'Баллистика':
             self.sec_window = BallisticExpWindow(self)
         elif exp_type == 'МКТ':
             mkt_type, ok_pressed = QInputDialog.getItem(
                 self, "Тип МКТ-эксперимента", "Выберите тип МКТ-эксперимента",
-                ["Труба", "Цилиндр", "Замкнутый процесс"], editable=False
+                ["Труба"], editable=False
             )
             if mkt_type == 'Труба':
-                self.sec_window = Tube_Window(self)
+                self.sec_window = TubeWindow(self)
+            elif mkt_type == 'Цилиндр':
+                self.sec_window = CylinderWindow(self)
         self.sec_window.show()
 
     def paintEvent(self, event):

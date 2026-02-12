@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+MKT_Cylinder_window = """<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Form</class>
  <widget class="QWidget" name="Form">
@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1454</width>
+    <width>1000</width>
     <height>800</height>
    </rect>
   </property>
@@ -58,7 +58,7 @@
         </attribute>
         <layout class="QGridLayout" name="gridLayout_6">
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_5" rowstretch="0,0,0,0,0,0,0,0,0" columnstretch="0,0,0,0,0">
+          <layout class="QGridLayout" name="gridLayout_5" rowstretch="0,0,0,0,0,0,0,0,0,0" columnstretch="0,0,0,0,0">
            <property name="rightMargin">
             <number>0</number>
            </property>
@@ -68,23 +68,17 @@
            <property name="spacing">
             <number>-1</number>
            </property>
-           <item row="0" column="4">
-            <widget class="QLineEdit" name="expname_lineEdit">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>16777215</height>
-              </size>
+           <item row="7" column="4">
+            <widget class="QSpinBox" name="m_forcer_spinBox"/>
+           </item>
+           <item row="7" column="3">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Масса поршня</string>
              </property>
             </widget>
            </item>
-           <item row="8" column="3">
+           <item row="9" column="3">
             <widget class="QPushButton" name="start_btn">
              <property name="minimumSize">
               <size>
@@ -103,11 +97,27 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="0" rowspan="8" colspan="3">
-            <widget class="QTabWidget" name="tube_tabWidget">
+           <item row="0" column="4">
+            <widget class="QLineEdit" name="expname_lineEdit">
              <property name="minimumSize">
               <size>
-               <width>590</width>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" rowspan="9" colspan="3">
+            <widget class="QTabWidget" name="cylinder_tabWidget">
+             <property name="minimumSize">
+              <size>
+               <width>500</width>
                <height>400</height>
               </size>
              </property>
@@ -144,13 +154,30 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1" colspan="2">
-            <widget class="QLCDNumber" name="P_lcdNumber">
-             <property name="styleSheet">
-              <string notr="true">background-color: &quot;black&quot;</string>
+           <item row="3" column="4">
+            <widget class="QSpinBox" name="m_spinBox">
+             <property name="maximum">
+              <number>999999999</number>
              </property>
-             <property name="digitCount">
-              <number>20</number>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QSpinBox" name="Mr_spinBox">
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3" colspan="2">
+            <widget class="QLabel" name="figure_label">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Тело:</string>
              </property>
             </widget>
            </item>
@@ -170,30 +197,13 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="3" colspan="2">
-            <widget class="QLabel" name="figure_label">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>30</height>
-              </size>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLCDNumber" name="P_lcdNumber">
+             <property name="styleSheet">
+              <string notr="true">background-color: &quot;black&quot;</string>
              </property>
-             <property name="text">
-              <string>Тело:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="4">
-            <widget class="QSpinBox" name="m_spinBox">
-             <property name="maximum">
-              <number>999999999</number>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="4">
-            <widget class="QSpinBox" name="Mr_spinBox">
-             <property name="maximum">
-              <number>999999999</number>
+             <property name="digitCount">
+              <number>20</number>
              </property>
             </widget>
            </item>
@@ -237,7 +247,7 @@
            <item row="2" column="3">
             <widget class="QLabel" name="mass_label">
              <property name="text">
-              <string>молекулярная масса:</string>
+              <string>относительная молярная масса:</string>
              </property>
             </widget>
            </item>
@@ -258,25 +268,15 @@
              </property>
             </widget>
            </item>
-           <item row="7" column="3">
-            <widget class="QLabel" name="label_3">
+           <item row="8" column="3">
+            <widget class="QLabel" name="label_5">
              <property name="text">
-              <string>Среднняя скорость мол.</string>
+              <string>Площадь поршня</string>
              </property>
             </widget>
            </item>
-           <item row="7" column="4">
-            <widget class="QLCDNumber" name="avgV_lcdNumber">
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: &quot;grey&quot;;</string>
-             </property>
-            </widget>
+           <item row="8" column="4">
+            <widget class="QSpinBox" name="S_forcer_spinBox"/>
            </item>
           </layout>
          </item>
@@ -383,3 +383,4 @@
  <resources/>
  <connections/>
 </ui>
+"""

@@ -67,7 +67,7 @@ music_window = """<?xml version="1.0" encoding="UTF-8"?>
     </rect>
    </property>
    <property name="text">
-    <string>►</string>
+    <string>▶️</string>
    </property>
   </widget>
   <widget class="QLabel" name="pixmap1">
@@ -132,7 +132,7 @@ music_window = """<?xml version="1.0" encoding="UTF-8"?>
     </rect>
    </property>
    <property name="text">
-    <string>►</string>
+    <string>▶️</string>
    </property>
   </widget>
   <widget class="QPushButton" name="return_btn">
@@ -158,7 +158,7 @@ music_window = """<?xml version="1.0" encoding="UTF-8"?>
     </rect>
    </property>
    <property name="text">
-    <string>►</string>
+    <string>▶️</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -223,7 +223,7 @@ music_window = """<?xml version="1.0" encoding="UTF-8"?>
     </rect>
    </property>
    <property name="text">
-    <string>►</string>
+    <string>▶️</string>
    </property>
   </widget>
   <widget class="QLabel" name="pixmap5">
@@ -262,7 +262,7 @@ music_window = """<?xml version="1.0" encoding="UTF-8"?>
     </rect>
    </property>
    <property name="text">
-    <string>►</string>
+    <string>▶️</string>
    </property>
   </widget>
  </widget>

@@ -2,7 +2,7 @@ from PyQt6 import QtCore, QtWidgets
 import sys
 import os
 from PyQt6.QtWidgets import QApplication
-from pycode.MyMainWindow import MyMainWindow
+from pycode import MyMainWindow
 
 '''
 На экранах с высоким разрешением некоторые интерфейсы,

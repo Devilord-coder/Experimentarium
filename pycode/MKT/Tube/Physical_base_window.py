@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QWidget
 from resources.MKT_physiscs import PHYSICS
-from PyQt6.QtGui import QIcon
+from PyQt6.QtGui import QIcon, QPixmap, QPainter
+from PyQt6.QtCore import Qt
 from PyQt6 import uic
 import io
 from PyQt6.QtCore import Qt
@@ -19,13 +20,15 @@ class Physical_Base_Window(QWidget):
         self.setStyleSheet('background-color: "black"')
         self.setStyleSheet(experiment_window_sheet)
         self.main_window = main_window
+        self.pixmap = QPixmap("resources/background.png")
         
         self.textBrowser.setHtml(PHYSICS)
-        
-        self.pixmap = QPixmap('resources/help_photo.jpg')
     
     def paintEvent(self, event):
-        super().paintEvent(event)
+        """ Функция для отрисовки изображения
+        Args:
+            event (_type_): Событие
+        """
         
         painter = QPainter(self)
         # Масштабируем изображение под размер виджета
