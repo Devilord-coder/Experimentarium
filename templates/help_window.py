@@ -18,8 +18,8 @@ help_window = """<?xml version="1.0" encoding="UTF-8"?>
   </property>
   <property name="maximumSize">
    <size>
-    <width>800</width>
-    <height>700</height>
+    <width>1000000</width>
+    <height>100000</height>
    </size>
   </property>
   <property name="cursor">
