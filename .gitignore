@@ -8,3 +8,7 @@ dist/
 **/._.DS_Store
 system/
 system.py
+get_struct_project.py
+project_structure.txt
+Icon
+pycode/.DS_Store
